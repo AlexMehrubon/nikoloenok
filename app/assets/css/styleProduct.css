@@ -1,0 +1,272 @@
+.goods {
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+}
+
+
+.products {
+    position: relative;
+    list-style: none;
+    margin-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+
+
+.product-wrapper {
+    width: 100%;
+    float: left;
+    transition: width .2s;
+}
+
+
+
+
+@media only screen and (min-width: 450px) {
+    .product-wrapper {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-wrapper {
+        width: 33%;
+
+    }
+
+    .product{
+
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .product-wrapper {
+        width: 25%;
+    }
+    .product{
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .product-wrapper {
+        width: 20%;
+    }
+    .product{
+        height: 450px;
+    }
+}
+
+
+
+
+
+.product {
+    display: block;
+    border: 1px solid #1a1818;
+    border-radius: 5px;
+    position: relative;
+    background: #0e0c0c;
+    margin: 0 20px 20px 0;
+    text-decoration: none;
+    color: #474747;
+    z-index: 0;
+    height: 450px;
+
+}
+
+.product:hover {
+    box-shadow: 4px 8px 16px rgb(204, 202, 202,0.2);
+}
+
+
+
+
+
+
+.product__top {
+    position: relative;
+    overflow: hidden; /* Скрываем, что выходит за пределы */
+}
+
+
+
+.product__photo {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.product__photo img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    transition: transform .3s ease-out;
+    text-decoration: none;
+}
+
+.product:hover .product__photo img {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.product__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff6633;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+
+.product__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+    padding: 10px;
+    }
+
+.product__prices {
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.product__price::after {
+    content: "₽";
+    margin-left: 4px;
+    position: relative;
+}
+
+.product__price--common {
+    font-weight: 700;
+    font-size: 19px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.product__title {
+    display: block;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: white;
+
+    width: 270px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product__add {
+    background-color: #2c2d31;
+    width: 90%;
+    font-weight: 400;
+    font-size: 17px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    cursor: pointer; /* Меняем курсор при наведении */
+    transition: 0.2s;
+    position: absolute;
+
+    bottom: 0.5em; /* Прижимаем кнопку к низу карточки */
+}
+
+
+
+.product__add:hover {
+
+    border: 1px solid #171515;
+    background-color: #070606;
+    color: #fff;
+
+}
+
+.product__title {
+    text-decoration: none;
+}
+
+.product__title:hover {
+    text-decoration: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.menuTitle>p{
+    display: block;
+    text-align: center;
+    font-size: 35px;
+
+}
+
+.menuTitle{
+    background-color: #ffffff;
+}
+
+
+:root {
+    --background-color: #ffffff;
+    --text-color: hsl(0, 0%, 0%);
+}
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 30px;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.5rem, 1rem + 18vw, 15rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.wrapper > div {
+    grid-area: 1/1/-1/-1;
+}
+.top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+}
+
+
+
