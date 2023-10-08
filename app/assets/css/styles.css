@@ -133,9 +133,10 @@ header, footer {
 }
 
 .background-container {
+    display: flex;
     background-image: url('http://nikoloenok/app/assets/pictures/blackback.png');
    position: relative;
-
+    flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Фон будет зафиксирован при прокрутке */
@@ -264,11 +265,11 @@ header, footer {
     }
 
     .footer__addr {
-        flex: 1 0px;
+        flex: 1 0;
     }
 
     .footer__nav {
-        flex: 2 0px;
+        flex: 2 0;
     }
 }
 
