@@ -44,7 +44,7 @@ function () {
                 divLabel.innerText = "-10%";
 
                 let img = document.createElement('img');
-                img.src = 'app/assets/pictures/barbeku.png';
+                img.src = item.photo_path;
 
 
                 let divBottom = document.createElement("div");
@@ -59,7 +59,7 @@ function () {
 
                 let pTitle = document.createElement('p');
                 pTitle.classList.add('product__title');
-                pTitle.textContent = item.name;
+                pTitle.textContent = item.name + ` ${item.weight}г.`;
 
 
                 let buttonAdd = document.createElement('button');

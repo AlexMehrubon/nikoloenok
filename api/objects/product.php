@@ -7,10 +7,9 @@ class Product{
     public $id;
     public $name;
     public $description;
-    public $category_id;
-    public $category_name;
-    public $created;
-
+    public  $price;
+    public  $weight;
+    public $photo_path;
 
     public function __construct($db)
     {
@@ -20,15 +19,9 @@ class Product{
     public function read()
     {
         $query = "SELECT
-        c.name as category_name, p.id, p.name, p.description, p.price,
-        p.category_id, p.created
+        p.id, p.name, p.description, p.price, p.weight, p.photo_path
         FROM
-            " . $this->table_name ." p
-            LEFT JOIN
-                categories c
-                    ON p.category_id = c.id
-        ORDER BY
-            p.created DESC";
+            " . $this->table_name ." p";
 
         $stmt = $this->conn->prepare($query);
 

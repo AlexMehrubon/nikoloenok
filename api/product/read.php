@@ -25,11 +25,12 @@ if($num > 0){
             "name" => $name,
             "description" => html_entity_decode($description),
             "price" => $price,
-            "category_id" => $category_id,
-            "category_name" => $category_name
+            "weight" => $weight,
+            "photo_path" => $photo_path
         );
 
         $products_arr["records"][] = $product_item;
+
     }
 
     http_response_code(200);

@@ -6,7 +6,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery-3.2.1" level="application" />
     <orderEntry type="library" name="bootbox.js" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="bootbox.js" level="application" />
     <orderEntry type="library" name="ionicons" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery-3.2.1" level="application" />
+    <orderEntry type="library" name="ionicons" level="application" />
   </component>
 </module>
