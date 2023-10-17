@@ -227,12 +227,12 @@ a {
 }
 
 .menuTitle{
-    background-color: #ffffff;
+    background-color: #565656;
 }
 
 
 :root {
-    --background-color: #ffffff;
+    --background-color: #565656;
     --text-color: hsl(0, 0%, 0%);
 }
 
@@ -261,7 +261,7 @@ a {
     background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
     background-clip: text;
     -webkit-background-clip: text;
-    transform: translateX(-0.02em);
+    transform: translateX(-0.05em);
 }
 
 

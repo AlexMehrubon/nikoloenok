@@ -23,7 +23,6 @@ main {
 }
 
 
-
 article {
     background-color: white;
     color: black;
@@ -135,7 +134,7 @@ header, footer {
 .background-container {
     display: flex;
     background-image: url('http://nikoloenok/app/assets/pictures/blackback.png');
-   position: relative;
+    position: relative;
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,7 +155,7 @@ header, footer {
 }
 
 .footer > * {
-    flex:  1 100%;
+    flex: 1 100%;
 }
 
 .footer__addr {
@@ -167,7 +166,7 @@ header, footer {
 .footer__logo {
     font-family: 'Pacifico', cursive;
     font-weight: 400;
-    text-transform: lowercase;
+    texransform: lowercase;
     font-size: 1.5rem;
 }
 
@@ -272,6 +271,127 @@ header, footer {
         flex: 2 0;
     }
 }
+
+
+.checkmark {
+    width: 200px;
+    height: 50px;
+    background-color: #51e544;
+    border-radius: 7%;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.checkmark img {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+
+}
+
+.checkmark>p{
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-right: 7px;
+}
+.greenCircle{
+    width: 50px;
+    height: 50px;
+    background-color: #55c421;
+    border-radius: 50%;
+    display: block;
+
+
+
+
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.dropbtn {
+    width: 188px;
+    background-color: #262525;
+
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #000000;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown img {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+.show {display:block;}
+
+
+
+
+
+
+
+
+
 
 
 

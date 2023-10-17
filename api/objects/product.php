@@ -6,7 +6,6 @@ class Product{
 
     public $id;
     public $name;
-    public $description;
     public  $price;
     public  $weight;
     public $photo_path;

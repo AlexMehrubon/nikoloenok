@@ -1,3 +1,6 @@
+let buttons = [];
+
+
 document.addEventListener("DOMContentLoaded", //showProducts
 function () {
     class Product {
@@ -9,7 +12,7 @@ function () {
     }
 
     // Используем функцию fetch для загрузки JSON файла
-    fetch('http://nikoloenok/api/product/read.php')
+    fetch('http://nikoloenok/api/product/readProduct.php')
         .then(function (response) {
             // Проверяем, успешно ли выполнен запрос
             if (!response.ok) {
@@ -62,12 +65,35 @@ function () {
                 pTitle.textContent = item.name + ` ${item.weight}г.`;
 
 
+
                 let buttonAdd = document.createElement('button');
                 buttonAdd.className = 'product__add';
                 buttonAdd.textContent = 'Заказать';
+                buttonAdd.id = `${item.id}Button`
+                buttonAdd.addEventListener("click", function (){
+                    let isBusy = false;
+                    buttons.forEach(function (button) {
+                        if(button.disabled === true){
+                            isBusy = true;
+                        }
+                    })
+
+                    if(!isBusy) {
+                        buttonAdd.disabled = true;
+                        const checkmark = document.getElementById("checkmarkID");
 
 
+                        checkmark.style.display = "flex";
+                        checkmark.style.animation = "appear 0.5s forwards";
+                        console.log("ADDED");
+                        setTimeout(function () {
+                            checkmark.style.display = "none";
+                            buttonAdd.disabled = false;
+                        }, 1100);
+                    }
+                })
 
+                buttons.push(buttonAdd);
 
                 let p = document.createElement('p');
                 p.className = "product__title";

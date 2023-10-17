@@ -24,7 +24,21 @@
                 <li class="menu__item">Contact Us</li>
             </ul>
         </nav>
-        <a class="menu__button" href="https://www">Add</a>
+        <div class="dropdown">
+            <img src="app/assets/pictures/man.png" alt="" onclick="myFunction()"/>
+            <button onclick="myFunction()" class="dropbtn">
+
+
+                Профиль
+            </button>
+
+            <div id="myDropdown" class="dropdown-content">
+                <a href="registrationPage.html">Войти</a>
+                <a href="registrationPage.html">Зарегистрироваться</a>
+
+
+            </div>
+        </div>
     </div>
     <div class="header_introduction">
         <div class="header_introduction__textblock">
@@ -76,7 +90,10 @@
         </ul>
 
 
-
+     <div id="checkmarkID" class="checkmark">
+         <img src="app/assets/pictures/gal.png" alt="">
+         <p >Заказ добавлен!</p>
+     </div>
 </main>
 
 <footer class="footer">
@@ -185,7 +202,7 @@
 
 
 <script src="app/products/read-products.js"></script>
-
+<script src="app/registrationScript.js"></script>
 
 </body>
 </html>
