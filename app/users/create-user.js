@@ -17,7 +17,8 @@ document.getElementById("reg-formID").addEventListener("submit", function (e) {
     fetch('http://nikoloenok/api/user/createUser.php', requestOptions)
         .then(response => {
             if (response.status === 201) {
-                console.log("ok");
+                document.getElementById("reg-formID").reset();
+                document.querySelector(".register-form .message a").click();
             } else {
                 return response.text().then(errorText => {
                     console.log(response.status, errorText);

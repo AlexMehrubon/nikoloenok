@@ -13,7 +13,8 @@ class User{
         $this->conn = $db;
     }
 
-    public function read(){
+    public function read(): bool|PDOStatement
+    {
         $query = "SELECT
          p.id, p.login, p.password, p.rights
          FROM 
@@ -30,6 +31,8 @@ class User{
         //Проверка, не занят ли логин пользователя
         $query = "SELECT * FROM users WHERE login =:login";
         $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':login', $this->login);
+        $stmt->execute();
         if($stmt->rowCount() > 0){
             return false;
         }
@@ -55,5 +58,24 @@ class User{
 
         return false;
 
+    }
+
+    public function Authorize():bool
+    {
+        $query = "SELECT * FROM users WHERE login =:login";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':login', $this->login);
+        $stmt->execute();
+
+        if(!$stmt->rowCount()){
+            return false;
+        }
+
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($this->password === $user['password']){
+            $_SESSION['user_id'] = $user['id'];
+            return true;
+        }
+        return false;
     }
 }

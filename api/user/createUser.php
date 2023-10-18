@@ -23,8 +23,7 @@ if(
     !empty($data->password)
 ){
     $user->login = $data->login;
-    $user->password = $data->password;
-
+    $user->password = $data->password; //password_hash($data->password, PASSWORD_DEFAULT);
     if($user->create()){
         http_response_code(201);
         echo json_encode(array("message" => "User has been created"),JSON_UNESCAPED_UNICODE);
@@ -35,5 +34,5 @@ if(
     }
 }else{
     http_response_code(400);
-
+    echo json_encode(array("message" =>"Data Error"), JSON_UNESCAPED_UNICODE);
 }

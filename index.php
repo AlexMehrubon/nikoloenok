@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
+    <meta content="no-cache" />
+
     <title>Flexbox в CSS3</title>
     <link rel="stylesheet" type="text/css" href="app/assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="app/assets/css/styleProduct.css">
@@ -13,6 +15,8 @@
 </head>
 <body>
 <header>
+
+
     <div class="menu" id="IDmenu">
         <img class="menu__icon" src="app/assets/pictures/free-icon-bbq-grill-3828275.png" alt="">
         <nav class="menu__nav">
@@ -25,19 +29,24 @@
             </ul>
         </nav>
         <div class="dropdown">
-            <img src="app/assets/pictures/man.png" alt="" onclick="myFunction()"/>
+            <img src="app/assets/pictures/man.png" alt=""/>
             <button onclick="myFunction()" class="dropbtn">
-
-
                 Профиль
             </button>
 
-            <div id="myDropdown" class="dropdown-content">
+
+            <div id="myDropdownNoneAuthorized" class="dropdown-content-none-authorized">
                 <a href="registrationPage.html">Войти</a>
                 <a href="registrationPage.html">Зарегистрироваться</a>
-
-
             </div>
+
+            <div id="myDropdownAuthorized" class="dropdown-content-authorized">
+                <a href="registrationPage.html">Корзина</a>
+                <a href="#" id ="exit">Выйти</a>
+            </div>
+
+
+
         </div>
     </div>
     <div class="header_introduction">
@@ -202,7 +211,8 @@
 
 
 <script src="app/products/read-products.js"></script>
-<script src="app/registrationScript.js"></script>
+<script src="app/users/log-out.js"></script>
+<script src="app/scripts/drop-down.js"></script>
 
 </body>
 </html>
