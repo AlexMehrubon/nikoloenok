@@ -6,10 +6,10 @@ function myFunction() {
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
 
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('show')) {
                 openDropdown.classList.remove('show');
             }
@@ -18,11 +18,12 @@ window.onclick = function(event) {
 }
 
 
-var createAccButton = document.querySelector(".login-form .message a");
+
+let createAccButton = document.querySelector(".login-form .message a");
 
 createAccButton.addEventListener("click", function() {
-    logForm = document.getElementById("log-formID");
-    regForm = document.getElementById("reg-formID");
+    let logForm = document.getElementById("log-formID");
+    let regForm = document.getElementById("reg-formID");
 
 
     logForm.style.display = "none";
@@ -30,10 +31,10 @@ createAccButton.addEventListener("click", function() {
 
 });
 
-var logAccButton = document.querySelector(".register-form .message a");
+let logAccButton = document.querySelector(".register-form .message a");
 logAccButton.addEventListener("click", function() {
-    logForm = document.getElementById("log-formID");
-    regForm = document.getElementById("reg-formID");
+    let logForm = document.getElementById("log-formID");
+    let regForm = document.getElementById("reg-formID");
 
 
     regForm.style.display = "none";

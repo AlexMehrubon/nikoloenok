@@ -12,21 +12,20 @@
         <p>ВХОД / РЕГИСТРАЦИЯ</p>
         <form class="login-form" id="log-formID">
 
-            <input type="text" placeholder="username"/>
+            <input type="text" placeholder="username" />
             <input type="password" placeholder="password"/>
             <button>login</button>
             <p class="message">Not registered?
-                <a href="#" >Create an account</a>
+                <a >Create an account</a>
             </p>
         </form>
 
-        <form class="register-form" id = "reg-formID">
-            <input type="text" placeholder="name"/>
-            <input type="password" placeholder="password"/>
-            <input type="text" placeholder="email address"/>
-            <button>create</button>
+        <form class="register-form" id = "reg-formID" method="post">
+            <input type="text" placeholder="login" name="login" id="loginRegField" required/>
+            <input type="password" placeholder="password" name="password" id = "passwordRegField" required/>
+            <button class ="registrationButton" type="submit">create</button>
             <p class="message">Already registered?
-                <a href="#">Sign In</a>
+                <a>Sign In</a>
             </p>
         </form>
 
@@ -34,5 +33,6 @@
 
 
 <script src="app/registrationScript.js"></script>
+<script src="app/users/create-user.js"></script>
 </body>
 </html>
