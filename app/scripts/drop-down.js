@@ -7,12 +7,14 @@ function myFunction() {
             return response.json();
         })
         .then(function (is_authorized) {
+
             if(is_authorized){
                 document.getElementById("myDropdownNoneAuthorized").classList.remove("show");
-                document.getElementById("myDropdownAuthorized").classList.toggle("show");
+               document.getElementById("myDropdownAuthorized").classList.toggle("show");
             }
             else{
-                document.getElementById("myDropdownNoneAuthorized").classList.toggle("show");
+
+               document.getElementById("myDropdownNoneAuthorized").classList.toggle("show");
                 document.getElementById("myDropdownAuthorized").classList.remove("show");
             }
         }).catch(function (error) {

@@ -3,10 +3,9 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-include_once "../config/database.php";
 include_once "../objects/product.php";
-
-
+include_once "../config/database.php";
+include_once "../config/boot.php";
 
 $product = new Product((new Database())->getConnection());
 

@@ -22,8 +22,8 @@ if(
     $user->login = $data->login;
     $user->password = $data->password; //password_hash($data->password, PASSWORD_DEFAULT);
 
-    if($user->Authorize()){
-        http_response_code(200);
+    if($user->authorize()){
+        http_response_code(203);
         echo json_encode(array("message" => "User has been authorized"),JSON_UNESCAPED_UNICODE);
         exit();
     }else{

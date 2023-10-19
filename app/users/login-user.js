@@ -16,9 +16,8 @@ document.getElementById("log-formID").addEventListener("submit", function (e) {
 
     fetch('http://nikoloenok/api/user/loginUser.php',requestOptions)
         .then(response =>{
-            if(response.status === 200){
+            if(response.status === 203){
                 window.location.assign('index.php');
-
             }else{
 
                 return response.text().then(errorText => {

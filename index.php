@@ -3,20 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width"/>
-    <meta content="no-cache" />
+    <meta content="no-cache"/>
 
     <title>Flexbox в CSS3</title>
     <link rel="stylesheet" type="text/css" href="app/assets/css/styles.css">
     <link rel="stylesheet" type="text/css" href="app/assets/css/styleProduct.css">
 
-    <!-- bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
 <header>
-
-
     <div class="menu" id="IDmenu">
         <img class="menu__icon" src="app/assets/pictures/free-icon-bbq-grill-3828275.png" alt="">
         <nav class="menu__nav">
@@ -41,10 +37,9 @@
             </div>
 
             <div id="myDropdownAuthorized" class="dropdown-content-authorized">
-                <a href="registrationPage.html">Корзина</a>
-                <a href="#" id ="exit">Выйти</a>
+                <a href="basket.php">Корзина</a>
+                <a href="#" id="exit">Выйти</a>
             </div>
-
 
 
         </div>
@@ -69,40 +64,40 @@
         </section>
     </article>
 
-        <ul class="products" id="IDproducts">
-            <li class="product-wrapper">
-                <a class="product">
-                    <div class="product__top">
-                        <div class="product__photo">
-                            <img src='app/assets/pictures/barbeku.png'  alt="">
-                        </div>
-
-                        <div class="product__label">-10%</div>
+    <ul class="products" id="IDproducts">
+        <li class="product-wrapper">
+            <a class="product">
+                <div class="product__top">
+                    <div class="product__photo">
+                        <img src='app/assets/pictures/barbeku.png' alt="">
                     </div>
 
-                    <div class="product__bottom">
-                        <div class = "product__prices">
-                            <div class="product__price product__price--common">150</div>
-                        </div>
+                    <div class="product__label">-10%</div>
+                </div>
 
-                        <p class = "product__title" >
-                            Стейк со свининой "По французки с перцемааааа" 400г.
-                        </p>
-
-                        <button class="product__add">Заказать</button>
-
-
+                <div class="product__bottom">
+                    <div class="product__prices">
+                        <div class="product__price product__price--common">150</div>
                     </div>
-                </a>
-            </li>
 
-        </ul>
+                    <p class="product__title">
+                        Стейк со свининой "По французки с перцемааааа" 400г.
+                    </p>
+
+                    <button class="product__add">Заказать</button>
 
 
-     <div id="checkmarkID" class="checkmark">
-         <img src="app/assets/pictures/gal.png" alt="">
-         <p >Заказ добавлен!</p>
-     </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+
+    <div id="checkmarkID" class="checkmark">
+        <img src="app/assets/pictures/gal.png" alt="">
+        <p>Заказ добавлен!</p>
+    </div>
 </main>
 
 <footer class="footer">
@@ -196,21 +191,8 @@
 </footer>
 
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-<!-- bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-
-<!-- JS для всплывающих окон -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-
-
-<script src="app/products/read-products.js"></script>
+<script type="module" src="app/products/read-products.js"></script>
 <script src="app/users/log-out.js"></script>
 <script src="app/scripts/drop-down.js"></script>
 

@@ -4,9 +4,9 @@ class Product{
     private ?PDO $conn;
     private string $table_name = "products";
 
-    public $id;
-    public $name;
-    public  $price;
+    public int $id;
+    public string $name;
+    public  float $price;
     public  $weight;
     public $photo_path;
 

@@ -1,8 +1,10 @@
 let buttons = [];
 
+import {createBasket} from "/app/basket/create-basket.js";
 
 document.addEventListener("DOMContentLoaded", //showProducts
 function () {
+
     class Product {
         constructor(id, name, price) {
             this.id = id;
@@ -69,7 +71,7 @@ function () {
                 let buttonAdd = document.createElement('button');
                 buttonAdd.className = 'product__add';
                 buttonAdd.textContent = 'Заказать';
-                buttonAdd.id = `${item.id}Button`
+                buttonAdd.id = `${item.id}`
                 buttonAdd.addEventListener("click", function (){
                     let isBusy = false;
                     buttons.forEach(function (button) {
@@ -82,10 +84,12 @@ function () {
                         buttonAdd.disabled = true;
                         const checkmark = document.getElementById("checkmarkID");
 
-
                         checkmark.style.display = "flex";
                         checkmark.style.animation = "appear 0.5s forwards";
                         console.log("ADDED");
+
+                        createBasket(buttonAdd.id);
+
                         setTimeout(function () {
                             checkmark.style.display = "none";
                             buttonAdd.disabled = false;
